@@ -10,24 +10,21 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="px-5 py-24 sm:px-8 sm:py-36">
-      <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-12 lg:gap-16">
-        <Reveal className="lg:col-span-5">
-          <h2 className="text-3xl font-semibold tracking-[-0.02em] sm:text-5xl">How we build</h2>
+    <section id="process" className="px-3 sm:px-6">
+      <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-ink px-6 py-16 text-white sm:px-12 sm:py-20 lg:px-16">
+        <Reveal className="mb-12">
+          <h2 className="text-[clamp(2.2rem,5vw,4rem)] font-semibold leading-[0.96] tracking-[-0.04em]">How we build</h2>
         </Reveal>
-        <ol className="lg:col-span-7">
+
+        <ol className="grid gap-px overflow-hidden rounded-2xl bg-white/10 sm:grid-cols-2 lg:grid-cols-5">
           {steps.map((s, i) => (
-            <li key={s.t}>
-              <Reveal>
-                <div className="flex gap-6 border-t border-line py-7 first:border-t-0 first:pt-0 sm:gap-10">
-                  <span className="w-6 pt-1 text-sm text-red">{i + 1}</span>
-                  <div>
-                    <h3 className="text-xl font-semibold tracking-tight">{s.t}</h3>
-                    <p className="mt-1.5 text-lg text-body">{s.d}</p>
-                  </div>
-                </div>
-              </Reveal>
-            </li>
+            <Reveal key={s.t} delay={i * 0.07}>
+              <li className="h-full bg-ink p-7">
+                <span className="text-sm text-red">Step {i + 1}</span>
+                <h3 className="mt-8 text-xl font-semibold tracking-tight">{s.t}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-white/60">{s.d}</p>
+              </li>
+            </Reveal>
           ))}
         </ol>
       </div>
