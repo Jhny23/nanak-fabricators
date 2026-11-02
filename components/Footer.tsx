@@ -9,6 +9,7 @@ export default function Footer() {
           <Image src="/logo.png" alt={site.name} width={768} height={277} className="logo-blend h-14 w-auto" />
           <ul className="flex flex-wrap gap-8 text-sm text-steel">
             {[
+              ["#about", "About"],
               ["#builds", "Builds"],
               ["#process", "Process"],
               ["#sectors", "Sectors"],
@@ -24,7 +25,13 @@ export default function Footer() {
         </div>
         <div className="mt-10 flex flex-wrap justify-between gap-4 border-t border-line pt-6 font-mono text-xs uppercase tracking-wider text-steel">
           <span>© {new Date().getFullYear()} {site.name}</span>
-          <span>{site.location}</span>
+          <span className="flex gap-6">
+            <a href={site.facebook} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-ink">Facebook</a>
+            {site.tiktok && (
+              <a href={site.tiktok} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-ink">TikTok</a>
+            )}
+            <span>{site.location}</span>
+          </span>
         </div>
       </div>
     </footer>

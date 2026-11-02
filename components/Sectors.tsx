@@ -1,21 +1,10 @@
 import Reveal from "./Reveal";
 
 const sectors = [
-  {
-    t: "Logistics & freight",
-    d: "Truck bodies, tippers and trailers for operators moving cargo across Kenya and the wider region.",
-    k: "Truck · Tipper · Trailer",
-  },
-  {
-    t: "Education",
-    d: "School and institution buses built for daily, high-frequency passenger duty.",
-    k: "Bus",
-  },
-  {
-    t: "Public transit",
-    d: "Passenger bodies for operators and fleets running regular routes across East Africa.",
-    k: "Bus",
-  },
+  { t: "Logistics & freight", d: "Cargo bodies, trailers and refrigerated trucks for operators moving goods across Kenya and the wider region.", k: "Truck · Trailer" },
+  { t: "Education", d: "School and institution buses built for daily, high-frequency passenger duty.", k: "Bus" },
+  { t: "Public transit", d: "Commuter and passenger bodies for operators and fleets running regular routes across East Africa.", k: "Bus" },
+  { t: "Construction, mining & sanitation", d: "Tippers, water tankers and vacuum exhausters built for demanding earthmoving, industrial and municipal work.", k: "Tipper · Tanker" },
 ];
 
 export default function Sectors() {
@@ -30,14 +19,14 @@ export default function Sectors() {
             East Africa.
           </h2>
           <p className="mt-6 max-w-md text-lg leading-relaxed text-steel">
-            Our bodies serve logistics operators, schools and public transit — anywhere a vehicle is expected to work
+            Our bodies serve commercial, institutional and transport operators — anywhere a vehicle is expected to work
             hard, every day.
           </p>
         </Reveal>
 
         <div className="lg:col-span-7">
           {sectors.map((s, i) => (
-            <Reveal key={s.t} delay={i * 0.08}>
+            <Reveal key={s.t} delay={i * 0.06}>
               <div className="group flex items-start gap-6 border-t border-line py-8 last:border-b">
                 <span className="font-mono text-sm text-steel">0{i + 1}</span>
                 <div className="flex-1">

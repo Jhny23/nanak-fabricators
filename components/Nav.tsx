@@ -2,10 +2,12 @@ import Image from "next/image";
 import { site } from "@/lib/site";
 
 const links = [
+  { href: "#about", label: "About" },
   { href: "#builds", label: "Builds" },
   { href: "#process", label: "Process" },
   { href: "#sectors", label: "Sectors" },
   { href: "#chassis", label: "Chassis" },
+  { href: "#quote", label: "Contact" },
 ];
 
 export default function Nav() {
@@ -22,7 +24,7 @@ export default function Nav() {
             priority
           />
         </a>
-        <ul className="hidden items-center gap-9 text-sm font-medium text-steel md:flex">
+        <ul className="hidden items-center gap-8 text-sm font-medium text-steel lg:flex">
           {links.map((l) => (
             <li key={l.href}>
               <a href={l.href} className="transition-colors hover:text-ink">

@@ -4,9 +4,9 @@ import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Nanak Fabricators Limited — Truck, Bus, Tipper & Trailer Bodies, Kenya",
+  title: "Nanak Fabricators Limited — Built Strong. Built to Last.",
   description:
-    "Nanak Fabricators builds truck, bus, tipper and trailer bodies from scratch near Athi River, Kenya — for logistics, schools and public transit across East Africa.",
+    "Approved vehicle body manufacturer in Athi River, Kenya. Custom bus, truck, tipper, trailer and tanker bodies fabricated from scratch.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

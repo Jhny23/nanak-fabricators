@@ -32,23 +32,37 @@ export default function Contact() {
             <div>
               <p className="eyebrow !text-white/50">06 / Start a build</p>
               <h2 className="mt-4 text-[clamp(2.2rem,4.6vw,3.6rem)] font-semibold leading-[0.96] tracking-[-0.04em]">
-                Tell us what
+                Your vision.
                 <br />
-                it needs to carry.
+                <span className="text-red">Our craft.</span>
               </h2>
+              <p className="mt-5 max-w-sm text-white/60">Tell us what it needs to carry and we will engineer the body around it.</p>
             </div>
-            <dl className="mt-16 space-y-6 text-sm">
-              {[
-                ["Workshop", site.location],
-                ["Phone", site.phoneDisplay],
-                ["Email", site.email],
-                ["Hours", site.hours],
-              ].map(([k, v]) => (
-                <div key={k} className="flex justify-between gap-6 border-t border-white/10 pt-4">
-                  <dt className="font-mono text-xs uppercase tracking-[0.18em] text-white/45">{k}</dt>
-                  <dd className="text-right">{v}</dd>
-                </div>
-              ))}
+            <dl className="mt-14 space-y-5 text-sm">
+              <div className="flex justify-between gap-6 border-t border-white/10 pt-4">
+                <dt className="font-mono text-xs uppercase tracking-[0.18em] text-white/45">Workshop</dt>
+                <dd className="max-w-[16rem] text-right leading-relaxed">{site.address}</dd>
+              </div>
+              <div className="flex justify-between gap-6 border-t border-white/10 pt-4">
+                <dt className="font-mono text-xs uppercase tracking-[0.18em] text-white/45">Phone</dt>
+                <dd className="text-right">
+                  {site.phones.map((p) => (
+                    <a key={p} href={`tel:${p.replace(/\s/g, "")}`} className="block transition-colors hover:text-red">
+                      {p}
+                    </a>
+                  ))}
+                </dd>
+              </div>
+              <div className="flex justify-between gap-6 border-t border-white/10 pt-4">
+                <dt className="font-mono text-xs uppercase tracking-[0.18em] text-white/45">Email</dt>
+                <dd className="text-right">
+                  {site.emails.map((m) => (
+                    <a key={m} href={`mailto:${m}`} className="block transition-colors hover:text-red">
+                      {m}
+                    </a>
+                  ))}
+                </dd>
+              </div>
             </dl>
           </div>
         </Reveal>

@@ -1,10 +1,11 @@
 import Reveal from "./Reveal";
 
 const steps = [
-  { n: "01", t: "Brief & specification", d: "We confirm the chassis, payload, dimensions and use case, then agree the build spec." },
-  { n: "02", t: "Cut & fabricate", d: "Raw steel is cut, formed and welded into the frame, floor and walls of your body." },
-  { n: "03", t: "Mount & finish", d: "The body is fitted to the chassis, then fitted out, prepared and painted in your colours." },
-  { n: "04", t: "Inspect & hand over", d: "Every unit is checked against the spec before it is delivered ready to work." },
+  { n: "01", t: "Design engineering", d: "Chassis, payload and dimensions are confirmed and the structure is engineered to the brief." },
+  { n: "02", t: "Precision cutting", d: "Raw material is cut to exact component dimensions — every measurement matters." },
+  { n: "03", t: "Welding & framing", d: "Heavy-duty welding and structural framing form the body that carries the load." },
+  { n: "04", t: "Anti-corrosive paint", d: "Industrial anti-corrosive painting and branding, finished in your colours." },
+  { n: "05", t: "Interior outfitting", d: "Seating, fittings and finishing are completed before the vehicle is handed over." },
 ];
 
 export default function Process() {
@@ -13,21 +14,19 @@ export default function Process() {
       <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-ink px-6 py-16 text-white sm:px-12 sm:py-24 lg:px-16">
         <Reveal className="mb-14 flex flex-wrap items-end justify-between gap-6">
           <div>
-            <p className="eyebrow mb-4 !text-white/50">03 / How it gets built</p>
+            <p className="eyebrow mb-4 !text-white/50">03 / From scratch to perfection</p>
             <h2 className="text-[clamp(2.2rem,5vw,4rem)] font-semibold leading-[0.96] tracking-[-0.04em]">
-              From a sheet of steel
+              From raw material
               <br />
-              to a finished vehicle.
+              to finished vehicle.
             </h2>
           </div>
-          <p className="max-w-sm text-white/60">
-            One team, one workshop, one standard — from the first cut to the final inspection.
-          </p>
+          <p className="max-w-sm text-white/60">One team, one workshop, one standard — from the first measurement to the final coat.</p>
         </Reveal>
 
-        <ol className="grid gap-px overflow-hidden rounded-2xl bg-white/10 md:grid-cols-4">
+        <ol className="grid gap-px overflow-hidden rounded-2xl bg-white/10 sm:grid-cols-2 lg:grid-cols-5">
           {steps.map((s, i) => (
-            <Reveal key={s.n} delay={i * 0.08}>
+            <Reveal key={s.n} delay={i * 0.07}>
               <li className="group relative h-full bg-ink p-7 transition-colors hover:bg-[#12151c]">
                 <span className="font-mono text-sm text-red">{s.n}</span>
                 <h3 className="mt-10 text-xl font-semibold tracking-tight">{s.t}</h3>
