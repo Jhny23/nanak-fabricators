@@ -14,7 +14,7 @@ export default function Contact() {
     e.preventDefault();
     const f = new FormData(e.currentTarget);
     const text = [
-      `Hello Nanak Fabricators, I'd like a quote.`,
+      `Hello Nanak Fabricators, I would like a quote.`,
       `Name: ${f.get("name")}`,
       `Company: ${f.get("company") || "-"}`,
       `Phone: ${f.get("phone")}`,
@@ -30,21 +30,16 @@ export default function Contact() {
         <Reveal className="lg:col-span-5">
           <div className="flex h-full flex-col justify-between rounded-[1.75rem] bg-ink p-8 text-white sm:p-12">
             <div>
-              <p className="eyebrow !text-white/50">06 / Start a build</p>
-              <h2 className="mt-4 text-[clamp(2.2rem,4.6vw,3.6rem)] font-semibold leading-[0.96] tracking-[-0.04em]">
-                Your vision.
-                <br />
-                <span className="text-red">Our craft.</span>
-              </h2>
-              <p className="mt-5 max-w-sm text-white/60">Tell us what it needs to carry and we will engineer the body around it.</p>
+                            <h2 className="text-[clamp(2.2rem,4.6vw,3.6rem)] font-semibold leading-[0.96] tracking-[-0.04em]">Get a quote</h2>
+              <p className="mt-5 max-w-sm text-white/60">Tell us what you need built and we will get back to you.</p>
             </div>
             <dl className="mt-14 space-y-5 text-sm">
               <div className="flex justify-between gap-6 border-t border-white/10 pt-4">
-                <dt className="font-mono text-xs uppercase tracking-[0.18em] text-white/45">Workshop</dt>
+                <dt className="text-white/45">Workshop</dt>
                 <dd className="max-w-[16rem] text-right leading-relaxed">{site.address}</dd>
               </div>
               <div className="flex justify-between gap-6 border-t border-white/10 pt-4">
-                <dt className="font-mono text-xs uppercase tracking-[0.18em] text-white/45">Phone</dt>
+                <dt className="text-white/45">Phone</dt>
                 <dd className="text-right">
                   {site.phones.map((p) => (
                     <a key={p} href={`tel:${p.replace(/\s/g, "")}`} className="block transition-colors hover:text-red">
@@ -54,7 +49,7 @@ export default function Contact() {
                 </dd>
               </div>
               <div className="flex justify-between gap-6 border-t border-white/10 pt-4">
-                <dt className="font-mono text-xs uppercase tracking-[0.18em] text-white/45">Email</dt>
+                <dt className="text-white/45">Email</dt>
                 <dd className="text-right">
                   {site.emails.map((m) => (
                     <a key={m} href={`mailto:${m}`} className="block transition-colors hover:text-red">
@@ -70,7 +65,7 @@ export default function Contact() {
         <Reveal delay={0.1} className="lg:col-span-7">
           <form onSubmit={submit} className="rounded-[1.75rem] border border-line bg-card p-8 sm:p-12">
             <fieldset className="mb-8">
-              <legend className="eyebrow mb-4">What are you building?</legend>
+              <legend className="mb-4 text-sm font-medium text-steel">What do you need built?</legend>
               <div className="flex flex-wrap gap-2">
                 {bodyTypes.map((b) => (
                   <button
@@ -95,7 +90,7 @@ export default function Contact() {
               <textarea
                 name="details"
                 rows={4}
-                placeholder="Chassis make & model, payload, dimensions, timeline…"
+                placeholder="Chassis make and model, size, anything else we should know"
                 className={`${field} resize-none sm:col-span-2`}
               />
             </div>
@@ -104,8 +99,7 @@ export default function Contact() {
               type="submit"
               className="group mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-red px-7 py-4 text-sm font-medium text-white transition-colors hover:bg-ink sm:w-auto"
             >
-              Send via WhatsApp
-              <span aria-hidden className="transition-transform group-hover:translate-x-0.5">→</span>
+              Send on WhatsApp
             </button>
           </form>
         </Reveal>

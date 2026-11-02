@@ -12,7 +12,6 @@ export default function Footer() {
               ["#about", "About"],
               ["#builds", "Builds"],
               ["#process", "Process"],
-              ["#sectors", "Sectors"],
               ["#quote", "Contact"],
             ].map(([h, l]) => (
               <li key={h}>
@@ -23,7 +22,7 @@ export default function Footer() {
             ))}
           </ul>
         </div>
-        <div className="mt-10 flex flex-wrap justify-between gap-4 border-t border-line pt-6 font-mono text-xs uppercase tracking-wider text-steel">
+        <div className="mt-10 flex flex-wrap justify-between gap-4 border-t border-line pt-6 text-sm text-steel">
           <span>© {new Date().getFullYear()} {site.name}</span>
           <span className="flex gap-6">
             <a href={site.facebook} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-ink">Facebook</a>

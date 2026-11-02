@@ -5,7 +5,6 @@ const links = [
   { href: "#about", label: "About" },
   { href: "#builds", label: "Builds" },
   { href: "#process", label: "Process" },
-  { href: "#sectors", label: "Sectors" },
   { href: "#chassis", label: "Chassis" },
   { href: "#quote", label: "Contact" },
 ];
@@ -37,8 +36,7 @@ export default function Nav() {
           href="#quote"
           className="group inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-red"
         >
-          Request a quote
-          <span aria-hidden className="transition-transform group-hover:translate-x-0.5">→</span>
+          Get a quote
         </a>
       </nav>
     </header>
