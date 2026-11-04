@@ -39,14 +39,15 @@ export default function Hero() {
           </div>
 
           <Reveal delay={0.25}>
-            <div className="relative mt-12 aspect-[16/9] overflow-hidden rounded-t-[1.5rem] sm:aspect-[21/9]">
+            <div className="mx-auto mt-12 max-w-4xl overflow-hidden rounded-t-[1.5rem]">
               <Image
-                src="/images/bus.jpg"
-                alt="Yellow Mustard school bus built by Nanak Fabricators"
-                fill
+                src="/images/tipper-blue.jpg"
+                alt="Blue tipper body with the Nanak badge on a white truck cab, built by Nanak Fabricators"
+                width={2000}
+                height={1500}
                 priority
-                sizes="(min-width: 1280px) 1200px, 100vw"
-                className="object-cover object-[50%_60%]"
+                sizes="(min-width: 1024px) 896px, 100vw"
+                className="h-auto w-full"
               />
             </div>
           </Reveal>
